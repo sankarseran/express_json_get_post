@@ -9,6 +9,14 @@ app.use(bodyParser.urlencoded({
     extended: true
 })); // support encoded bodies
 
+app.set('view engine', 'ejs');
+app.set('views', __dirname + '/views');
+app.use(express.static(__dirname + '/public'));
+
+app.get('/index', (req, res) => {
+    res.render('index');
+});
+
 app.get('/:id', (req, res) => {
     console.log(req.params)
     fs.exists('data.json', (exists) => {

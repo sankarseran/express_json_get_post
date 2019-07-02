@@ -1,25 +1,70 @@
 <!DOCTYPE html>
 <html>
 
+<head>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="webservice.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
+    <link rel="stylesheet" type="text/css" href="theme.css">
+</head>
+
 <body>
-    <p><label for="voltage">
+             <div class="w3-container w3-green">
+                <h1 align="center">Motor App </h1> 
+                <label class="powerStatus">Power is Available</label>
+              </div>
+              <div style="background-color:#f1f1f1;padding:15px;">
+                    <label id="phase" class="form">Phase Status</label>
+                </div>
+              <div class="w3-row-padding">
+                <div class="w3-third">
+                  <h2>London</h2>
+                  <p>London is the capital city of England.</p>
+                  <p>It is the most populous city in the United Kingdom,
+                  with a metropolitan area of over 13 million inhabitants.</p>
+                </div>
+              
+                <div class="w3-third">
+                  <h2>Paris</h2>
+                  <p>Paris is the capital of France.</p> 
+                  <p>The Paris area is one of the largest population centers in Europe,
+                  with more than 12 million inhabitants.</p>
+                </div>
+              
+                <div class="w3-third">
+                  <h2>Tokyo</h2>
+                  <p>Tokyo is the capital of Japan.</p>
+                  <p>It is the center of the Greater Tokyo Area,
+                  and the most populous metropolitan area in the world.</p>
+                </div>
+              </div>
+
+              <style>
+                    .powerStatus {
+                      color: blue;
+                      font-family: verdana;
+                    }
+                    
+                    </style>
+    <!-- <p><label for="voltage">
             <h1>Motor Status - Off </h1>
         </label></p>
-    <button class="button">Refresh</button>
+    <button onclick="getMotorAPI('58')" class="button">Refresh</button>
     <br>
     <p>Ams Details:</p>
-    <meter value="2" min="0" max="100">2 out of 10</meter>
-    <label for="ams">AMS Value : </label>
+    <meter id="amsMeter" value="2" min="0" max="100">2 out of 10</meter>
+    <label id="lblAMS">AMS Value : </label>
     <br>
     <p>Voltage Details:</p>
-    <meter value="2" min="0" max="100">2 out of 10</meter>
-    <label for="voltage">Voltage Value : </label>
+    <meter id="volMeter" value="2" min="0" max="100">2 out of 10</meter>
+    <label id="lblVOL">Voltage Value : </label>
     <br>
     <br>
     <br>
     <br>
     <div class="btn-group">
-        <button>Motor 1 On</button>
+        <button>Motor 1 On </button>
         <button>Off</button>
         <button>Motor 2 On</button>
     </div>
@@ -113,7 +158,7 @@
             border: none;
             border-radius: 15px;
         }
-    </style>
+    </style> -->
 </body>
 <script>
     var xhttp = new XMLHttpRequest();
