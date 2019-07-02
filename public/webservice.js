@@ -8,6 +8,7 @@ function getMotorAPI(deviceID) {
         success: function(result){
             console.log(result);
             $(document).ready(function () {
+                $('#powerStatuslbl').html('Power Status :' + result.status);
                 $('#lblAMS').html('AMS Value :' + result.data.Currentvalue);
                 $('#lblVOL').html('Voltage Value :' + result.data.Voltagevalue);
                 document.getElementById("amsMeter").setAttribute("value", result.data.Currentvalue);
